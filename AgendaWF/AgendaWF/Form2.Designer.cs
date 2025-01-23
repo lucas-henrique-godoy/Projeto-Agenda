@@ -167,7 +167,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(619, 360);
+            ClientSize = new Size(633, 362);
             Controls.Add(label5);
             Controls.Add(dataGridView1);
             Controls.Add(button4);
