@@ -34,9 +34,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(588, 363);
+            BackColor = Color.White;
+            ClientSize = new Size(619, 360);
             Name = "Form2";
-            Text = "Form2";
+            Text = "AGENDA";
             ResumeLayout(false);
         }
 

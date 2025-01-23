@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             button1 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -45,23 +48,35 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(183, 257);
+            button1.Location = new Point(186, 362);
             button1.Name = "button1";
-            button1.Size = new Size(214, 55);
+            button1.Size = new Size(223, 55);
             button1.TabIndex = 1;
             button1.Text = "ENTRAR";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(186, 86);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(223, 233);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(598, 358);
+            BackColor = Color.White;
+            ClientSize = new Size(645, 454);
+            Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "HOME";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -70,5 +85,6 @@
 
         private Label label1;
         private Button button1;
+        private PictureBox pictureBox1;
     }
 }
