@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtId = new TextBox();
+            txtNome = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txtTelefone = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            txtEmail = new TextBox();
             label4 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btInserir = new Button();
+            btAlterar = new Button();
+            btExcluir = new Button();
+            btLocalizar = new Button();
             dataGridView1 = new DataGridView();
-            label5 = new Label();
+            lbDados = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -54,19 +54,19 @@
             label1.TabIndex = 0;
             label1.Text = "ID";
             // 
-            // textBox1
+            // txtId
             // 
-            textBox1.Location = new Point(67, 6);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(90, 23);
-            textBox1.TabIndex = 1;
+            txtId.Location = new Point(67, 6);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(90, 23);
+            txtId.TabIndex = 1;
             // 
-            // textBox2
+            // txtNome
             // 
-            textBox2.Location = new Point(67, 46);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(205, 23);
-            textBox2.TabIndex = 3;
+            txtNome.Location = new Point(67, 46);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(205, 23);
+            txtNome.TabIndex = 3;
             // 
             // label2
             // 
@@ -77,12 +77,12 @@
             label2.TabIndex = 2;
             label2.Text = "NOME";
             // 
-            // textBox3
+            // txtTelefone
             // 
-            textBox3.Location = new Point(357, 49);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(205, 23);
-            textBox3.TabIndex = 5;
+            txtTelefone.Location = new Point(357, 49);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(205, 23);
+            txtTelefone.TabIndex = 5;
             // 
             // label3
             // 
@@ -93,12 +93,12 @@
             label3.TabIndex = 4;
             label3.Text = "TELEFONE";
             // 
-            // textBox4
+            // txtEmail
             // 
-            textBox4.Location = new Point(67, 90);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(205, 23);
-            textBox4.TabIndex = 7;
+            txtEmail.Location = new Point(67, 90);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(205, 23);
+            txtEmail.TabIndex = 7;
             // 
             // label4
             // 
@@ -109,58 +109,58 @@
             label4.TabIndex = 6;
             label4.Text = "EMAIL";
             // 
-            // button1
+            // btInserir
             // 
-            button1.Location = new Point(291, 94);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btInserir.Location = new Point(291, 94);
+            btInserir.Name = "btInserir";
+            btInserir.Size = new Size(75, 23);
+            btInserir.TabIndex = 8;
+            btInserir.Text = "INSERIR";
+            btInserir.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btAlterar
             // 
-            button2.Location = new Point(372, 94);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 9;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btAlterar.Location = new Point(372, 94);
+            btAlterar.Name = "btAlterar";
+            btAlterar.Size = new Size(75, 23);
+            btAlterar.TabIndex = 9;
+            btAlterar.Text = "ALTERAR";
+            btAlterar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btExcluir
             // 
-            button3.Location = new Point(453, 94);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 10;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btExcluir.Location = new Point(453, 94);
+            btExcluir.Name = "btExcluir";
+            btExcluir.Size = new Size(75, 23);
+            btExcluir.TabIndex = 10;
+            btExcluir.Text = "EXCLUIR";
+            btExcluir.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btLocalizar
             // 
-            button4.Location = new Point(534, 94);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 11;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btLocalizar.Location = new Point(534, 94);
+            btLocalizar.Name = "btLocalizar";
+            btLocalizar.Size = new Size(87, 23);
+            btLocalizar.TabIndex = 11;
+            btLocalizar.Text = "LOCALIZAR";
+            btLocalizar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(23, 160);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(586, 164);
+            dataGridView1.Size = new Size(598, 164);
             dataGridView1.TabIndex = 12;
             // 
-            // label5
+            // lbDados
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(23, 336);
-            label5.Name = "label5";
-            label5.Size = new Size(219, 15);
-            label5.TabIndex = 13;
-            label5.Text = "Local onde os dados estão armazenados";
+            lbDados.AutoSize = true;
+            lbDados.Location = new Point(23, 336);
+            lbDados.Name = "lbDados";
+            lbDados.Size = new Size(219, 15);
+            lbDados.TabIndex = 13;
+            lbDados.Text = "Local onde os dados estão armazenados";
             // 
             // Form2
             // 
@@ -168,19 +168,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(633, 362);
-            Controls.Add(label5);
+            Controls.Add(lbDados);
             Controls.Add(dataGridView1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox4);
+            Controls.Add(btLocalizar);
+            Controls.Add(btExcluir);
+            Controls.Add(btAlterar);
+            Controls.Add(btInserir);
+            Controls.Add(txtEmail);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(txtTelefone);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtNome);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtId);
             Controls.Add(label1);
             Name = "Form2";
             Text = "AGENDA";
@@ -192,18 +192,18 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtId;
+        private TextBox txtNome;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtTelefone;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox txtEmail;
         private Label label4;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btInserir;
+        private Button btAlterar;
+        private Button btExcluir;
+        private Button btLocalizar;
         private DataGridView dataGridView1;
-        private Label label5;
+        private Label lbDados;
     }
 }
