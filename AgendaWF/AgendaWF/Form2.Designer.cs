@@ -50,9 +50,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(23, 14);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(18, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "ID";
             // 
             // textBox1
             // 
@@ -71,15 +71,15 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(23, 54);
+            label2.Location = new Point(22, 49);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(42, 15);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "NOME";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(333, 46);
+            textBox3.Location = new Point(357, 49);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(205, 23);
             textBox3.TabIndex = 5;
@@ -89,9 +89,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(289, 54);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(62, 15);
             label3.TabIndex = 4;
-            label3.Text = "label3";
+            label3.Text = "TELEFONE";
             // 
             // textBox4
             // 
@@ -103,11 +103,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(23, 98);
+            label4.Location = new Point(23, 94);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(41, 15);
             label4.TabIndex = 6;
-            label4.Text = "label4";
+            label4.Text = "EMAIL";
             // 
             // button1
             // 
