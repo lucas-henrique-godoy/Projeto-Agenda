@@ -15,6 +15,6 @@ namespace AgendaWF
         public Form2()
         {
             InitializeComponent();
-        }
+        }        
     }
 }
