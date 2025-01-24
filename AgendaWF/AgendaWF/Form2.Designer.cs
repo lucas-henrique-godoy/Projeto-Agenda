@@ -40,9 +40,9 @@
             btAlterar = new Button();
             btExcluir = new Button();
             btLocalizar = new Button();
-            dataGridView1 = new DataGridView();
+            dgvDados = new DataGridView();
             lbDados = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDados).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -117,6 +117,7 @@
             btInserir.TabIndex = 8;
             btInserir.Text = "INSERIR";
             btInserir.UseVisualStyleBackColor = true;
+            btInserir.Click += btInserir_Click;
             // 
             // btAlterar
             // 
@@ -145,13 +146,13 @@
             btLocalizar.Text = "LOCALIZAR";
             btLocalizar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvDados
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(23, 160);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(598, 164);
-            dataGridView1.TabIndex = 12;
+            dgvDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDados.Location = new Point(23, 140);
+            dgvDados.Name = "dgvDados";
+            dgvDados.Size = new Size(598, 184);
+            dgvDados.TabIndex = 12;
             // 
             // lbDados
             // 
@@ -169,7 +170,7 @@
             BackColor = Color.White;
             ClientSize = new Size(633, 362);
             Controls.Add(lbDados);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvDados);
             Controls.Add(btLocalizar);
             Controls.Add(btExcluir);
             Controls.Add(btAlterar);
@@ -184,7 +185,8 @@
             Controls.Add(label1);
             Name = "Form2";
             Text = "AGENDA";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form2_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvDados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -203,7 +205,7 @@
         private Button btAlterar;
         private Button btExcluir;
         private Button btLocalizar;
-        private DataGridView dataGridView1;
+        private DataGridView dgvDados;
         private Label lbDados;
     }
 }
