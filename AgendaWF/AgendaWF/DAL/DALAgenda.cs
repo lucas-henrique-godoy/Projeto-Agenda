@@ -9,7 +9,7 @@ using System.Data;
 
 namespace AgendaWF.DAL
 {
-    public class DALAgenda : Contato
+    public class DALAgenda
     {
         public static string path = Directory.GetCurrentDirectory() + "\\banco.sqlite";
         private static SQLiteConnection sqliteConnection;
@@ -128,10 +128,10 @@ namespace AgendaWF.DAL
                 using (var cmd = DbConnection().CreateCommand())
                 {
                     cmd.CommandText = "UPDATE Contatos SET Nome=@Nome, Email=@Email, Tlefone=@Telefone WHERE Id=@Id)";
-                    cmd.Parameters.AddWithValue("@id", contato.Id);
-                    cmd.Parameters.AddWithValue("@nome", contato.Nome);
-                    cmd.Parameters.AddWithValue("@email", contato.Email);
-                    cmd.Parameters.AddWithValue("@telefone", contato.Telefone);
+                    cmd.Parameters.AddWithValue("@Id", contato.Id);
+                    cmd.Parameters.AddWithValue("@Nome", contato.Nome);
+                    cmd.Parameters.AddWithValue("@Email", contato.Email);
+                    cmd.Parameters.AddWithValue("@Telefone", contato.Telefone);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -143,8 +143,20 @@ namespace AgendaWF.DAL
         }
 
         public static void Delete(int id)
-        {
+        {            
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "DELETE FROM Contatos WHERE Id=@Id";
+                    cmd.Parameters.AddWithValue("Id", id);
+                }
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
         }
 
     }
