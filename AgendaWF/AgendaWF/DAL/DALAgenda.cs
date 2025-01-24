@@ -56,22 +56,90 @@ namespace AgendaWF.DAL
 
         public static DataTable GetContatos()
         {
-            return new DataTable();
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {                                
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Contatos";
+                    da = new SQLiteDataAdapter(cmd.CommandText, DbConnection());
+                    da.Fill(dt);
+                    return dt;                    
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public static DataTable GetContato(int id)
         {
-            return new DataTable();
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Contatos WHERE Id=" + id;
+                    da = new SQLiteDataAdapter(cmd.CommandText, DbConnection());
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public static void Add(Contato contato)
         {
-            
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO Contatos(id, nome, email, telefone) VALUES(@id, @nome, @email, @telefone)";
+                    cmd.Parameters.AddWithValue("@id", contato.Id);
+                    cmd.Parameters.AddWithValue("@nome", contato.Nome);
+                    cmd.Parameters.AddWithValue("@email", contato.Email);
+                    cmd.Parameters.AddWithValue("@telefone", contato.Telefone);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public static void Update(Contato contato) 
         {
-        
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Contatos SET Nome=@Nome, Email=@Email, Tlefone=@Telefone WHERE Id=@Id)";
+                    cmd.Parameters.AddWithValue("@id", contato.Id);
+                    cmd.Parameters.AddWithValue("@nome", contato.Nome);
+                    cmd.Parameters.AddWithValue("@email", contato.Email);
+                    cmd.Parameters.AddWithValue("@telefone", contato.Telefone);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public static void Delete(int id)
