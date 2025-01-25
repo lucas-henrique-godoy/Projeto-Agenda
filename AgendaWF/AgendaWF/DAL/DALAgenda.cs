@@ -75,6 +75,27 @@ namespace AgendaWF.DAL
             }
         }
 
+        public static DataTable GetContatos(string nome)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Contatos WHERE nome like '%"+nome+"%'";
+                    da = new SQLiteDataAdapter(cmd.CommandText, DbConnection());
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public static DataTable GetContato(int id)
         {
             SQLiteDataAdapter da = null;
@@ -127,7 +148,7 @@ namespace AgendaWF.DAL
             {
                 using (var cmd = DbConnection().CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Contatos SET Nome=@Nome, Email=@Email, Tlefone=@Telefone WHERE Id=@Id)";
+                    cmd.CommandText = "UPDATE Contatos SET Nome=@Nome, Email=@Email, Telefone=@Telefone WHERE Id=@Id";
                     cmd.Parameters.AddWithValue("@Id", contato.Id);
                     cmd.Parameters.AddWithValue("@Nome", contato.Nome);
                     cmd.Parameters.AddWithValue("@Email", contato.Email);
@@ -150,6 +171,7 @@ namespace AgendaWF.DAL
                 {
                     cmd.CommandText = "DELETE FROM Contatos WHERE Id=@Id";
                     cmd.Parameters.AddWithValue("Id", id);
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

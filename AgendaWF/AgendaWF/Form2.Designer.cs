@@ -127,6 +127,7 @@
             btAlterar.TabIndex = 9;
             btAlterar.Text = "ALTERAR";
             btAlterar.UseVisualStyleBackColor = true;
+            btAlterar.Click += btAlterar_Click;
             // 
             // btExcluir
             // 
@@ -136,6 +137,7 @@
             btExcluir.TabIndex = 10;
             btExcluir.Text = "EXCLUIR";
             btExcluir.UseVisualStyleBackColor = true;
+            btExcluir.Click += btExcluir_Click;
             // 
             // btLocalizar
             // 
@@ -145,6 +147,7 @@
             btLocalizar.TabIndex = 11;
             btLocalizar.Text = "LOCALIZAR";
             btLocalizar.UseVisualStyleBackColor = true;
+            btLocalizar.Click += btLocalizar_Click;
             // 
             // dgvDados
             // 

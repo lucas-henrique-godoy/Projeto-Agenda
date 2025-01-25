@@ -48,9 +48,90 @@ namespace AgendaWF
         {
             try
             {
+                Contato contato = new Contato();
+                contato.Id = Convert.ToInt32(txtId.Text);
+                contato.Nome = txtNome.Text;
+                contato.Email = txtEmail.Text;
+                contato.Telefone = txtTelefone.Text;
 
+                DALAgenda.Add(contato);
+                ExibirDados();
+
+                txtId.Clear();
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtTelefone.Clear();
             }
-            catch (Exception ex )
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        private void btAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Contato contato = new Contato();
+                contato.Id = Convert.ToInt32(txtId.Text);
+                contato.Nome = txtNome.Text;
+                contato.Email = txtEmail.Text;
+                contato.Telefone = txtTelefone.Text;
+
+                DALAgenda.Update(contato);
+                ExibirDados();
+
+                txtId.Clear();
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtTelefone.Clear();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(txtId.Text);
+                DALAgenda.Delete(id);
+                ExibirDados();
+
+                txtId.Clear();
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtTelefone.Clear();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        private void btLocalizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                if (txtId.Text != "")
+                {
+                    int id = Convert.ToInt32(txtId.Text);
+                    dt = DALAgenda.GetContato(id);
+                }
+                else
+                {
+                    string nome = txtNome.Text;
+                    dt = DALAgenda.GetContatos(nome);
+                }
+                dgvDados.DataSource = dt;
+            }
+            catch (Exception ex)
             {
 
                 MessageBox.Show("ERROR: " + ex.Message);
