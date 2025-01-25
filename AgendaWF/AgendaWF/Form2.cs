@@ -17,6 +17,9 @@ namespace AgendaWF
         public Form2()
         {
             InitializeComponent();
+
+            // Centraliza o Form1 na tela
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -130,6 +133,10 @@ namespace AgendaWF
                     dt = DALAgenda.GetContatos(nome);
                 }
                 dgvDados.DataSource = dt;
+                txtId.Clear();
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtTelefone.Clear();
             }
             catch (Exception ex)
             {
